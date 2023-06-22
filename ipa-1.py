@@ -157,4 +157,5 @@ def body_mass_index(weight, height):
     bmi=weight_kg/height_m
     return float(bmi)
 
+#height is inputted as a string then converted into a list in the program
 body_mass_index(101.34,"5'2")
