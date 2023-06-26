@@ -109,7 +109,7 @@ def interest(principal, rate, periods):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
     result1=principal*(rate*periods)
-    result2=result1+principal
+    result2=(result1+principal)//1
     return int(result2)
 
 interest(30000, 0.03, 2)
