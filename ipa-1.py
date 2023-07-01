@@ -109,7 +109,7 @@ def interest(principal, rate, periods):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
     result1=principal*(rate*periods)
-    result2=result1+principal
+    result2=(result1+principal)//1
     return int(result2)
 
 interest(30000, 0.03, 2)
@@ -157,4 +157,5 @@ def body_mass_index(weight, height):
     bmi=weight_kg/height_m
     return float(bmi)
 
+#height is inputted as a string then converted into a list in the program
 body_mass_index(101.34,"5'2")
