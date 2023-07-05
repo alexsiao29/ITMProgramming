@@ -53,8 +53,6 @@ def shift_letter(letter, shift):
                  letter=list[list.index(i)]
     return str(letter)
 
-shift_letter("B", _)
-
 def caesar_cipher(message, shift):
     '''Caesar Cipher.
     10 points.
