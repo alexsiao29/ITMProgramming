@@ -149,13 +149,8 @@ def body_mass_index(weight, height):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    height1=slice(1)
-    height2=slice(2,4)
-    height_list=[int(height[height1]),int(height[height2])]
     weight_kg=weight*0.454
-    height_m=(((height_list[0]*12)+height_list[1])*0.0254)**2
+    height_string=str(height)
+    height_m=(((int(height_string[0])*12)+int(height_string[1:]))*0.0254)**2
     bmi=weight_kg/height_m
     return float(bmi)
-
-#height is inputted as a string then converted into a list in the program
-body_mass_index(101.34,"5'2")
