@@ -38,12 +38,17 @@ def shift_letter(letter, shift):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    list=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-    position=list.index(letter)
-    current=position+shift
-    if current>=26:
-        current=current-26
-    for i in list:
+    if letter==" ":
+        letter=" "
+    elif shift==_:
+        shift=0
+    else:
+        list=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+        position=list.index(letter)
+        current=position+shift
+        if current>=26:
+            current=current-26
+        for i in list:
             if list.index(i)==current:
                  letter=list[list.index(i)]
     return str(letter)
@@ -66,6 +71,8 @@ def caesar_cipher(message, shift):
     str
         the message, shifted appropriately.
     '''
+    if shift==0:
+        final=message  
     current1="_"*shift
     current2=""
     for char in message:
@@ -76,7 +83,7 @@ def caesar_cipher(message, shift):
             current1=current1+char  
     final=final.replace("_","") 
     return str(final)
-
+    
 def shift_by_letter(letter, letter_shift):
     '''Shift By Letter.
     10 points.
@@ -106,13 +113,16 @@ def shift_by_letter(letter, letter_shift):
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     
-    list=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
-    position2=list.index(letter)
-    shift_out=list.index(letter_shift)
-    current2=position2+shift_out
-    if current2>=26:
-        current2=current2-26
-    for i in list:
+    if letter==" ":
+        letter=" "
+    else:
+        list=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+        position2=list.index(letter)
+        shift_out=list.index(letter_shift)
+        current2=position2+shift_out
+        if current2>=26:
+            current2=current2-26
+        for i in list:
             if list.index(i)==current2:
                  letter=list[list.index(i)]
     return str(letter) 
